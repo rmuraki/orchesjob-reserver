@@ -3,7 +3,7 @@ from __future__ import annotations
 import contextlib
 import os
 import sqlite3
-from typing import Iterable
+from typing import Iterator
 
 
 def ensure_parent_dir(path: str) -> None:
@@ -55,7 +55,7 @@ def init_db(conn: sqlite3.Connection) -> None:
 
 
 @contextlib.contextmanager
-def transaction(conn: sqlite3.Connection) -> Iterable[None]:
+def transaction(conn: sqlite3.Connection) -> Iterator[None]:
     conn.execute("BEGIN IMMEDIATE")
     try:
         yield
@@ -64,3 +64,4 @@ def transaction(conn: sqlite3.Connection) -> Iterable[None]:
         raise
     else:
         conn.execute("COMMIT")
+        

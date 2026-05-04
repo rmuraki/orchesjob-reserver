@@ -160,6 +160,7 @@ def cmd_clean(args: argparse.Namespace) -> None:
             after=after,
             all_=args.all,
             job_id=args.job_id,
+            reservation_id=args.reservation_id,
             run_key=args.run_key,
             dry_run=args.dry_run,
         )
