@@ -550,7 +550,7 @@ Common fields:
 
 Time fields stored in the database are Unix epoch seconds. JSON command output includes both epoch seconds and ISO 8601 strings where applicable.
 
-`run` logs are JSON Lines. Each line is one JSON object and includes a readable ISO 8601 `ts` field.
+`run` logs are JSON Lines. Each line is one JSON object and includes both a readable ISO 8601 `ts` field and a machine-friendly integer `ts_epoch` field.
 
 ## Exit Codes
 
