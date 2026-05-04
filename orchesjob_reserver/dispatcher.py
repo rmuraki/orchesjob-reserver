@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import signal
 import sqlite3
-import sys
 import time
 from typing import Any
 
