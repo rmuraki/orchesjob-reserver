@@ -11,7 +11,7 @@ The key value is that the central orchestrator can **reserve a job with a future
 A primary goal of `orchesjob-reserver` is to decouple **reservation time** from **execution time**:
 
 ```text
-Airflow / MWAA
+Server/ Airflow / MWAA
   |
   | SSH
   v
